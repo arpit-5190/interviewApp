@@ -1,1 +1,23 @@
-<p>datepicker-element works!</p>
+<div class="row">
+    <div class="col-md-4">
+        <div class="moveClass">
+            <mat-form-field class="blockPosition">
+
+                <mat-label>
+                    {{dummyDatepickerData.question.text}}
+                </mat-label>
+                <input 
+                    matInput
+                    [matDatepicker]="picker"
+                    [placeholder]="dummyDatepickerData.input.placeholderValue">
+
+                <mat-datepicker-toggle
+                    matSuffix [for]="picker">
+                </mat-datepicker-toggle>
+
+                <mat-datepicker #picker>
+                </mat-datepicker>
+            </mat-form-field>
+        </div>
+    </div>
+</div>
