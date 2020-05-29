@@ -5,7 +5,7 @@
             <!--If we want to display different icon for catefory then we have to pass "state" property-->
             <mat-step
                 [stepControl]="verticalFormGroup"
-                *ngFor="let category of dummyCategoryDate; first as f; last as l">
+                *ngFor="let category of dummyCategoryData; first as f; last as l">
 
                 <form [formGroup]="verticalFormGroup">
                     <ng-template matStepLabel>
@@ -16,7 +16,7 @@
 
                     <h4>
                         <strong>
-                            {{"Selected Category: " + catefory.displayText}}
+                            {{"Selected Category: " + category.displayText}}
                         </strong>
                     </h4>
 

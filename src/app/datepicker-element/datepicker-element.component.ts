@@ -9,7 +9,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class DatepickerElementComponent implements OnInit {
 
   //Define an Input variable which is used to navigate data from parent app component to child component
-  @Input() dummyDatapickerData:any;
+  @Input() dummyDatepickerData:any;
   constructor() { }
 
   ngOnInit() {

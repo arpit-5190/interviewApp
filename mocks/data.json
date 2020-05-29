@@ -283,6 +283,21 @@
                       }
                     ]
                   }
+                },
+                {
+                  "order":4,
+                  "question": {
+                    "id":3,
+                    "text": "Date of offense",
+                    "answer":""
+                  },
+                  "input":{
+                    "id":1,
+                    "required":true,
+                    "type":"datepicker",
+                    "placeholderValue":"Ex. 03/04/2020"
+                  }
+
                 }
               ]
             },
@@ -469,7 +484,7 @@
         }
       },
       {
-        "id":0,
+        "id":1,
         "client":{
           "id": 0,
           "firstName": "Test",

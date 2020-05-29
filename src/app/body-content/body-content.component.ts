@@ -57,7 +57,7 @@ export class BodyContentComponent implements OnInit {
 
   //Define function which will return interview section and question information with sorted data
   public getData = (value:any) => {
-    for(let section of value.interview.section){
+    for(let section of value.interview.sections){
       this.updatedData[section.order] = section;
       section.questionInputs.sort(
         function(a:any, b:any){
