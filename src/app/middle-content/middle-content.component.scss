@@ -1,0 +1,32 @@
+.example-container {
+    position: absolute;
+    top: 60px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #eee;
+}
+
+header{
+    width: 200px;
+    float: left;
+}
+
+.content-container{
+    margin-left: 250px;
+}
+
+.mat-step-header .mat-focus-indicator .mat-horizontal-stepper-header{
+    background-color: bisque;
+    border: 2px solid green !important;
+}
+
+::ng-deep mat-stepper-horizontal, mat-stepper-horizontal{
+    border: dashed 1px blue;
+    padding: 1em;
+}
+
+::ng-deep mat-step-header{
+    background-color: 2px solid green !important;
+    border-radius: 5px !important;
+}

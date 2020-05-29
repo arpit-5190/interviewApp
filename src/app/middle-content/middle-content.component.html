@@ -1,5 +1,91 @@
 <div class="row" style="margin-top: 10px;">
     <div class="col-md-12">
+        <mat-vertical-stepper labelPosition="bottom">
+
+            <!--If we want to display different icon for catefory then we have to pass "state" property-->
+            <mat-step
+                [stepControl]="verticalFormGroup"
+                *ngFor="let category of dummyCategoryDate; first as f; last as l">
+
+                <form [formGroup]="verticalFormGroup">
+                    <ng-template matStepLabel>
+                        <div>
+                            {{category.displayText}}
+                        </div>
+                    </ng-template>
+
+                    <h4>
+                        <strong>
+                            {{"Selected Category: " + catefory.displayText}}
+                        </strong>
+                    </h4>
+
+                    <div *ngFor="let listItem of category.questionInputs">
+
+                        <!-- This custom html element selector is used to display autocomplete dropdown-->
+                        <app-autocomplete-element
+                            *ngIf="listItem.input.type === 'autocomplete'"
+                            [dummyAutocompleteData]="listItem">
+                        </app-autocomplete-element>
+
+                        <!--This custom html element selector is used to display input elements-->
+                        <app-input-element
+                            *ngIf="listItem.input.type === 'input'"
+                            [dummyInputData]="listItem">
+                        </app-input-element>
+
+                        <!--This custom html element selector is used to display Textarea elements-->
+                        <app-textarea-element
+                            *ngIf="listItem.input.type === 'textarea'"
+                            [dummyTextAreaData]="listItem">
+                        </app-textarea-element>
+
+                        <!-- This custom html element selector is used to display Radio elements-->
+                        <app-radio-element
+                            *ngIf="listItem.input.type === 'radio'"
+                            [dummyRadioData]="listItem">
+                        </app-radio-element>
+
+                        <!--This custom html elemnt selector is used to display select dropdown elements-->
+                        <app-select-element
+                            *ngIf="listItem.input.type === 'select'"
+                            [dummySelectData]="listItem">
+                        </app-select-element>
+
+                        <!--This custom html element selector is used to display checkbox elements-->
+                        <app-checkbox-element
+                            *ngIf="listItem.input.type === 'checkbox'"
+                            [dummyCheckboxData]="listItem">
+                        </app-checkbox-element>
+
+                        <!--This custom html element selector is used to display calendar-->
+                        <app-datepicker-element
+                            *ngIf="listItem.input.type === 'datepicker'"
+                            [dummyDatepickerData] = "listItem">
+
+                        </app-datepicker-element>
+                    </div>
+
+                    <div>
+                        <button
+                            *ngIf="!f"
+                            color="primary"
+                            mat-raised-button
+                            matStepperPrevious>
+                                Previous
+                        </button>
+                        <button
+                            *ngIf="!l"
+                            color="primary"
+                            mat-raised-button
+                            matStepperNext
+                            style="float: right;">
+                                Next
+                        </button>
+                    </div>
+                </form>
+            </mat-step>
+        </mat-vertical-stepper>
 
     </div>
 </div>
