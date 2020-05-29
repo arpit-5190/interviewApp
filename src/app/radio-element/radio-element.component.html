@@ -1,1 +1,22 @@
-<p>radio-element works!</p>
+<div class="row">
+    <div class="col-md-8">
+
+        <!--This below div is used to display radio button-->
+        <div class="moveClass">
+            <mat-radio-group
+                class="blockPosition">
+                <mat-label>
+                    {{dummyRadioData.question.text}}
+                </mat-label>
+
+                <mat-radio-button
+                    *ngFor="let item of dummyRadioData.input.radioCheckboxOptions"
+                    [value]="item"
+                    class="radioElements">
+                    {{item}}
+                </mat-radio-button>
+            </mat-radio-group>
+        </div>
+        <hr>
+    </div>
+</div>
