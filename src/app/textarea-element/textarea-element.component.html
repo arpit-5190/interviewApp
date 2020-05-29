@@ -1,1 +1,29 @@
-<p>textarea-element works!</p>
+<div class="row">
+    <div class="col-md-6">
+
+        <!--This div is used to display textarea-->
+        <div class="moveClass">
+            <mat-form-field
+                class="fullWidth"
+                appearance="fill">
+
+                <mat-label>
+                    {{dummyTextAreaData.question.text}}
+                </mat-label>
+
+                <textarea 
+                    matInput
+                    [placeholder]="dummyTextAreaData.input.placeholderValue"
+                    [formControl]="textareaControl"
+                    [required]="dummyTextAreaData.input.required">
+                </textarea>
+
+                <mat-error
+                    *ngIf="textareaControl.hasError('required')">
+                    {{dummyTextAreaData.input.requiredErrorMsg}}
+                </mat-error>
+            </mat-form-field>
+
+        </div>
+    </div>
+</div>
