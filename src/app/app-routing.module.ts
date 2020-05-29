@@ -1,8 +1,12 @@
+import { BodyContentComponent } from './body-content/body-content.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 
-const routes: Routes = [];
+const routes: Routes = [
+  { path:'', redirectTo:'/', pathMatch:'full'},
+  { path:'**', component:BodyContentComponent}
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

@@ -1,0 +1,18 @@
+<!--First Div container is the main container which contains child component-->
+<div class="container-fluid">
+    <!--Second Div container is the header container which contains logo and user information-->
+    <div class="row toolbar">
+        <div class="col-md-12 col-sm-12">
+            <span style="margin-left:10px">Interview</span>
+            <span style="float: right;">Welcome, {clientInfo}</span>
+        </div>
+    </div>
+
+    <!--This container will be used to display main content-->
+    <div class="row">
+        <div class="col-md-12 col-sm-12">
+            <app-middle-content [dummyCategoryData]="sectionsData"></app-middle-content>
+        </div>
+    </div>
+
+</div>

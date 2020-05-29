@@ -1,0 +1,940 @@
+{
+    "interviews": [
+      {
+        "id":0,
+        "client":{
+          "id": 0,
+          "firstName": "Arpit",
+          "lastName": "Rathod",
+          "email": "arpit.rathod@testmail.com"
+          
+        },
+        "interview":{
+          "id": 0,
+          "sections": [
+            {
+              "id": 0,
+              "order": 0,
+              "displayText": "Personal Information",
+              "description": "This section includes Input, number and select dropdown elements",
+              "questionInputs": [
+                {
+                  "order": 1,
+                  "question": {
+                    "id": 0,
+                    "text": "Height (Feet)",
+                    "answer":""
+                    
+                  },
+                  "input":{
+                    "id": 0,
+                    "required": true,
+                    "type": "input",
+                    "inputType": "number",
+                    "placeholderValue": "ex., 5",
+                    "requiredErrorMsg": "Height field is required"
+                  }
+                },
+                {
+                  "order": 2,
+                  "question": {
+                    "id": 1,
+                    "text": "Height (Inches)",
+                    "answer":""
+                    
+                  },
+                  "input":{
+                    "id":1,
+                    "required": true,
+                    "type": "input",
+                    "inputType": "number",
+                    "placeholderValue": "ex., 5",
+                    "requiredErrorMsg": "Height (Inches) field is required"
+                  }
+                },
+                {
+                  "order": 3,
+                  "question": {
+                    "id": 1,
+                    "text": "Current weight (Pounds)",
+                    "answer":""
+                    
+                  },
+                  "input":{
+                    "id": 1,
+                    "maxLength": 3,
+                    "required": true,
+                    "type": "input",
+                    "inputType": "text",
+                    "placeholderValue": "ex., 5",
+                    "requiredErrorMsg": "Current weight is required"
+                  }
+                },
+                {
+                  "order": 4,
+                  "question": {
+                    "id": 3,
+                    "text": "Approximate weight a year ago?",
+                    "answer":""
+                    
+                  },
+                  "input":{
+                    "id": 1,
+                    "required": true,
+                    "type": "select",
+                    "requiredErrorMsg": "Please select your approximate weight",
+                    "selectOptions": [
+                      {
+                        "label": "Please Select",
+                        "value": ""
+                      },
+                      {
+                        "label": "Same as Current",
+                        "value": "Same as Current"
+                      },
+                      {
+                        "label": "1-14lbs less than current",
+                        "value": "1-14lbs less than current"
+                      },
+                      {
+                        "label":"1-14lbs more than current",
+                        "value":"1-14lbs more than current"
+                      },
+                      {
+                        "label":"15lbs less than current",
+                        "value":"15lbs less than current"
+                      },
+                      {
+                        "label":"15lbs more than current",
+                        "value":"15lbs more than current"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "order": 0,
+                  "question": {
+                    "id": 1,
+                    "text": "Email",
+                    "answer":""
+                    
+                  },
+                  "input":{
+                    "id": 1,
+                    "required": true,
+                    "type": "input",
+                    "inputType": "text",
+                    "placeholderValue": "test@gmail.com",
+                    "requiredErrorMsg": "Email is required"
+                  }
+                }
+              ]
+            },
+            {
+              "id": 1,
+              "order": 1,
+              "displayText": "Medical History",
+              "description": "This section includes radio button, checkbox and select dropdown elements",
+              "questionInputs": [
+                {
+                  "order": 1,
+                  "question": {
+                    "id": 1,
+                    "text": "During the last 10 years, have you been diagnosed for any cancers",
+                    "answer":""
+                    
+                  },
+                  "input":{
+                    "id": 1,
+                    "required": true,
+                    "type": "radio",
+                    "radioCheckboxOptions":[
+                      "Yes",
+                      "No"
+                    ]
+                  }
+                },
+                {
+                  "order": 2,
+                  "question": {
+                    "id": 3,
+                    "text": "Please choose the cancer type",
+                    "answer":""
+                    
+                  },
+                  "input":{
+                    "id":1,
+                    "required": true,
+                    "type": "checkbox",
+                    "radioCheckboxOptions":[
+                      "Melanoma",
+                      "Colon",
+                      "Lung",
+                      "Breasts"
+                    ]
+                  }
+                },
+                {
+                  "order": 3,
+                  "question": {
+                    "id": 3,
+                    "text": "Please select stage of cancer",
+                    "answer":""
+                    
+                  },
+                  "input":{
+                    "id": 1,
+                    "required": true,
+                    "type": "select",
+                    "requiredErrorMsg":"stage field is required",
+                    "selectOptions": [
+                      {
+                        "label":"Please select",
+                        "value":""
+                      },
+                      {
+                        "label": "First Stage",
+                        "value": "First Stage"
+                      },
+                      {
+                        "label": "Second Stage",
+                        "value": "Second Stage"
+                      },
+                      {
+                        "label": "Third Stage",
+                        "value": "Third Stage"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "id": 1,
+              "order": 2,
+              "displayText": "Driving and Public Record",
+              "description": "This section includes radio button, input:text, select dropdown and datepicker elements",
+              "questionInputs": [
+                {
+                  "order": 1,
+                  "question": {
+                    "id": 1,
+                    "text": "Have you been convicted for reckless driving?",
+                    "answer":""
+                    
+                  },
+                  "input":{
+                    "id": 1,
+                    "required": true,
+                    "type": "radio",
+                    "radioCheckboxOptions":[
+                      "Yes",
+                      "No"
+                    ]
+                  }
+                },
+                {
+                  "order": 2,
+                  "question": {
+                    "id": 3,
+                    "text": "Number of Offense",
+                    "answer":""
+                    
+                  },
+                  "input":{
+                    "id":1,
+                    "maxLength":3,
+                    "required": true,
+                    "type": "input",
+                    "inputType":"text",
+                    "placeholderValue": "Ex., 4",
+                    "requiredErrorMsg":"Number of offense field is required"
+                  }
+                },
+                {
+                  "order": 3,
+                  "question": {
+                    "id": 3,
+                    "text": "Type of Offense",
+                    "answer":""
+                    
+                  },
+                  "input":{
+                    "id": 1,
+                    "required": true,
+                    "type": "select",
+                    "requiredErrorMsg":"Please select the type of offense",
+                    "selectOptions": [
+                      {
+                        "label":"Please select",
+                        "value":""
+                      },
+                      {
+                        "label": "Reckless Driving",
+                        "value": "reckless driving"
+                      },
+                      {
+                        "label": "DWI",
+                        "value": "dwi"
+                      },
+                      {
+                        "label": "DUI",
+                        "value": "dui"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "order": 3,
+              "displayText": "Personal Details",
+              "description": "This section includes select autocomplete drdopwn and textarea element",
+              "questionInputs": [
+                {
+                  "order": 2,
+                  "question": {
+                    "id": 2,
+                    "text": "Give me your personal details",
+                    "answer":""
+                    
+                  },
+                  "input":{
+                    "id": 1,
+                    "required": true,
+                    "type": "textarea",
+                    "inputType": "text",
+                    "placeholderValue":"ex., enter more details",
+                    "requiredErrorMsg": "Please enter your personal details"
+                  }
+                },
+                {
+                  "order": 2,
+                  "question": {
+                    "id": 5,
+                    "text": "State",
+                    "answer":""
+                    
+                  },
+                  "input":{
+                    "id":1,
+                    "required": true,
+                    "type": "autocomplete",
+                    "selectOptions": [
+                      {
+                        "label": "New York",
+                        "value": "New York"
+                      },
+                      {
+                        "label":"Iowa",
+                        "value":"Iowa"
+                      },
+                      {
+                        "label":"Indiana",
+                        "value":"Indiana"
+                      },
+                      {
+                        "label": "New Jersey",
+                        "value": "New Jersey"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "order": 3,
+                  "question": {
+                    "id": 5,
+                    "text": "State",
+                    "answer":""
+                    
+                  },
+                  "input":{
+                    "id":1,
+                    "required": true,
+                    "type": "autocomplete",
+                    "selectOptions": [
+                      {
+                        "label": "New York",
+                        "value": "New York"
+                      },
+                      {
+                        "label":"Iowa",
+                        "value":"Iowa"
+                      },
+                      {
+                        "label":"Indiana",
+                        "value":"Indiana"
+                      },
+                      {
+                        "label": "New Jersey",
+                        "value": "New Jersey"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "order": 4,
+              "displayText": "Personal Details",
+              "description": "This section includes select autocomplete drdopwn and textarea element",
+              "questionInputs": [
+                {
+                  "order": 2,
+                  "question": {
+                    "id": 2,
+                    "text": "Give me your personal details",
+                    "answer":""
+                    
+                  },
+                  "input":{
+                    "id": 1,
+                    "required": true,
+                    "type": "textarea",
+                    "inputType": "text",
+                    "placeholderValue":"ex., enter more details",
+                    "requiredErrorMsg": "Please enter your personal details"
+                  }
+                },
+                {
+                  "order": 2,
+                  "question": {
+                    "id": 5,
+                    "text": "State",
+                    "answer":""
+                    
+                  },
+                  "input":{
+                    "id":1,
+                    "required": true,
+                    "type": "autocomplete",
+                    "selectOptions": [
+                      {
+                        "label": "New York",
+                        "value": "New York"
+                      },
+                      {
+                        "label":"Iowa",
+                        "value":"Iowa"
+                      },
+                      {
+                        "label":"Indiana",
+                        "value":"Indiana"
+                      },
+                      {
+                        "label": "New Jersey",
+                        "value": "New Jersey"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "order": 3,
+                  "question": {
+                    "id": 5,
+                    "text": "State",
+                    "answer":""
+                    
+                  },
+                  "input":{
+                    "id":1,
+                    "required": true,
+                    "type": "autocomplete",
+                    "selectOptions": [
+                      {
+                        "label": "New York",
+                        "value": "New York"
+                      },
+                      {
+                        "label":"Iowa",
+                        "value":"Iowa"
+                      },
+                      {
+                        "label":"Indiana",
+                        "value":"Indiana"
+                      },
+                      {
+                        "label": "New Jersey",
+                        "value": "New Jersey"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "version": 0.1
+        }
+      },
+      {
+        "id":0,
+        "client":{
+          "id": 0,
+          "firstName": "Test",
+          "lastName": "Default",
+          "email": "test.default@testmail.com"
+          
+        },
+        "interview":{
+          "id": 0,
+          "sections": [
+            {
+              "id": 0,
+              "order": 0,
+              "displayText": "Personal Information",
+              "description": "This section includes Input, number and select dropdown elements",
+              "questionInputs": [
+                {
+                  "order": 1,
+                  "question": {
+                    "id": 0,
+                    "text": "Height (Feet)",
+                    "answer":""
+                    
+                  },
+                  "input":{
+                    "id": 0,
+                    "required": true,
+                    "type": "input",
+                    "inputType": "number",
+                    "placeholderValue": "ex., 5",
+                    "requiredErrorMsg": "Height field is required"
+                  }
+                },
+                {
+                  "order": 2,
+                  "question": {
+                    "id": 1,
+                    "text": "Height (Inches)",
+                    "answer":""
+                    
+                  },
+                  "input":{
+                    "id":1,
+                    "required": true,
+                    "type": "input",
+                    "inputType": "number",
+                    "placeholderValue": "ex., 5",
+                    "requiredErrorMsg": "Height (Inches) field is required"
+                  }
+                },
+                {
+                  "order": 3,
+                  "question": {
+                    "id": 1,
+                    "text": "Current weight (Pounds)",
+                    "answer":""
+                    
+                  },
+                  "input":{
+                    "id": 1,
+                    "maxLength": 3,
+                    "required": true,
+                    "type": "input",
+                    "inputType": "text",
+                    "placeholderValue": "ex., 5",
+                    "requiredErrorMsg": "Current weight is required"
+                  }
+                },
+                {
+                  "order": 4,
+                  "question": {
+                    "id": 3,
+                    "text": "Approximate weight a year ago?",
+                    "answer":""
+                    
+                  },
+                  "input":{
+                    "id": 1,
+                    "required": true,
+                    "type": "select",
+                    "requiredErrorMsg": "Please select your approximate weight",
+                    "selectOptions": [
+                      {
+                        "label": "Please Select",
+                        "value": ""
+                      },
+                      {
+                        "label": "Same as Current",
+                        "value": "Same as Current"
+                      },
+                      {
+                        "label": "1-14lbs less than current",
+                        "value": "1-14lbs less than current"
+                      },
+                      {
+                        "label":"1-14lbs more than current",
+                        "value":"1-14lbs more than current"
+                      },
+                      {
+                        "label":"15lbs less than current",
+                        "value":"15lbs less than current"
+                      },
+                      {
+                        "label":"15lbs more than current",
+                        "value":"15lbs more than current"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "order": 0,
+                  "question": {
+                    "id": 1,
+                    "text": "Email",
+                    "answer":""
+                    
+                  },
+                  "input":{
+                    "id": 1,
+                    "required": true,
+                    "type": "input",
+                    "inputType": "text",
+                    "placeholderValue": "test@gmail.com",
+                    "requiredErrorMsg": "Email is required"
+                  }
+                }
+              ]
+            },
+            {
+              "id": 1,
+              "order": 1,
+              "displayText": "Medical History",
+              "description": "This section includes radio button, checkbox and select dropdown elements",
+              "questionInputs": [
+                {
+                  "order": 1,
+                  "question": {
+                    "id": 1,
+                    "text": "During the last 10 years, have you been diagnosed for any cancers",
+                    "answer":""
+                    
+                  },
+                  "input":{
+                    "id": 1,
+                    "required": true,
+                    "type": "radio",
+                    "radioCheckboxOptions":[
+                      "Yes",
+                      "No"
+                    ]
+                  }
+                },
+                {
+                  "order": 2,
+                  "question": {
+                    "id": 3,
+                    "text": "Please choose the cancer type",
+                    "answer":""
+                    
+                  },
+                  "input":{
+                    "id":1,
+                    "required": true,
+                    "type": "checkbox",
+                    "radioCheckboxOptions":[
+                      "Melanoma",
+                      "Colon",
+                      "Lung",
+                      "Breasts"
+                    ]
+                  }
+                },
+                {
+                  "order": 3,
+                  "question": {
+                    "id": 3,
+                    "text": "Please select stage of cancer",
+                    "answer":""
+                    
+                  },
+                  "input":{
+                    "id": 1,
+                    "required": true,
+                    "type": "select",
+                    "requiredErrorMsg":"stage field is required",
+                    "selectOptions": [
+                      {
+                        "label":"Please select",
+                        "value":""
+                      },
+                      {
+                        "label": "First Stage",
+                        "value": "First Stage"
+                      },
+                      {
+                        "label": "Second Stage",
+                        "value": "Second Stage"
+                      },
+                      {
+                        "label": "Third Stage",
+                        "value": "Third Stage"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "id": 1,
+              "order": 2,
+              "displayText": "Driving and Public Record",
+              "description": "This section includes radio button, input:text, select dropdown and datepicker elements",
+              "questionInputs": [
+                {
+                  "order": 1,
+                  "question": {
+                    "id": 1,
+                    "text": "Have you been convicted for reckless driving?",
+                    "answer":""
+                    
+                  },
+                  "input":{
+                    "id": 1,
+                    "required": true,
+                    "type": "radio",
+                    "radioCheckboxOptions":[
+                      "Yes",
+                      "No"
+                    ]
+                  }
+                },
+                {
+                  "order": 2,
+                  "question": {
+                    "id": 3,
+                    "text": "Number of Offense",
+                    "answer":""
+                    
+                  },
+                  "input":{
+                    "id":1,
+                    "maxLength":3,
+                    "required": true,
+                    "type": "input",
+                    "inputType":"text",
+                    "placeholderValue": "Ex., 4",
+                    "requiredErrorMsg":"Number of offense field is required"
+                  }
+                },
+                {
+                  "order": 3,
+                  "question": {
+                    "id": 3,
+                    "text": "Type of Offense",
+                    "answer":""
+                    
+                  },
+                  "input":{
+                    "id": 1,
+                    "required": true,
+                    "type": "select",
+                    "requiredErrorMsg":"Please select the type of offense",
+                    "selectOptions": [
+                      {
+                        "label":"Please select",
+                        "value":""
+                      },
+                      {
+                        "label": "Reckless Driving",
+                        "value": "reckless driving"
+                      },
+                      {
+                        "label": "DWI",
+                        "value": "dwi"
+                      },
+                      {
+                        "label": "DUI",
+                        "value": "dui"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "order": 3,
+              "displayText": "Personal Details",
+              "description": "This section includes select autocomplete drdopwn and textarea element",
+              "questionInputs": [
+                {
+                  "order": 2,
+                  "question": {
+                    "id": 2,
+                    "text": "Give me your personal details",
+                    "answer":""
+                    
+                  },
+                  "input":{
+                    "id": 1,
+                    "required": true,
+                    "type": "textarea",
+                    "inputType": "text",
+                    "placeholderValue":"ex., enter more details",
+                    "requiredErrorMsg": "Please enter your personal details"
+                  }
+                },
+                {
+                  "order": 2,
+                  "question": {
+                    "id": 5,
+                    "text": "State",
+                    "answer":""
+                    
+                  },
+                  "input":{
+                    "id":1,
+                    "required": true,
+                    "type": "autocomplete",
+                    "selectOptions": [
+                      {
+                        "label": "New York",
+                        "value": "New York"
+                      },
+                      {
+                        "label":"Iowa",
+                        "value":"Iowa"
+                      },
+                      {
+                        "label":"Indiana",
+                        "value":"Indiana"
+                      },
+                      {
+                        "label": "New Jersey",
+                        "value": "New Jersey"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "order": 3,
+                  "question": {
+                    "id": 5,
+                    "text": "State",
+                    "answer":""
+                    
+                  },
+                  "input":{
+                    "id":1,
+                    "required": true,
+                    "type": "autocomplete",
+                    "selectOptions": [
+                      {
+                        "label": "New York",
+                        "value": "New York"
+                      },
+                      {
+                        "label":"Iowa",
+                        "value":"Iowa"
+                      },
+                      {
+                        "label":"Indiana",
+                        "value":"Indiana"
+                      },
+                      {
+                        "label": "New Jersey",
+                        "value": "New Jersey"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "order": 4,
+              "displayText": "Personal Details",
+              "description": "This section includes select autocomplete drdopwn and textarea element",
+              "questionInputs": [
+                {
+                  "order": 2,
+                  "question": {
+                    "id": 2,
+                    "text": "Give me your personal details",
+                    "answer":""
+                    
+                  },
+                  "input":{
+                    "id": 1,
+                    "required": true,
+                    "type": "textarea",
+                    "inputType": "text",
+                    "placeholderValue":"ex., enter more details",
+                    "requiredErrorMsg": "Please enter your personal details"
+                  }
+                },
+                {
+                  "order": 2,
+                  "question": {
+                    "id": 5,
+                    "text": "State",
+                    "answer":""
+                    
+                  },
+                  "input":{
+                    "id":1,
+                    "required": true,
+                    "type": "autocomplete",
+                    "selectOptions": [
+                      {
+                        "label": "New York",
+                        "value": "New York"
+                      },
+                      {
+                        "label":"Iowa",
+                        "value":"Iowa"
+                      },
+                      {
+                        "label":"Indiana",
+                        "value":"Indiana"
+                      },
+                      {
+                        "label": "New Jersey",
+                        "value": "New Jersey"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "order": 3,
+                  "question": {
+                    "id": 5,
+                    "text": "State",
+                    "answer":""
+                    
+                  },
+                  "input":{
+                    "id":1,
+                    "required": true,
+                    "type": "autocomplete",
+                    "selectOptions": [
+                      {
+                        "label": "New York",
+                        "value": "New York"
+                      },
+                      {
+                        "label":"Iowa",
+                        "value":"Iowa"
+                      },
+                      {
+                        "label":"Indiana",
+                        "value":"Indiana"
+                      },
+                      {
+                        "label": "New Jersey",
+                        "value": "New Jersey"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "version": 0.1
+        }
+      }
+    ]
+  }
