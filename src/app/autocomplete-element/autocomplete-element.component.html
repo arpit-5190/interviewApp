@@ -1,1 +1,27 @@
-<p>autocomplete-element works!</p>
+<div class="row">
+    <div class="col-md-4">
+        <div class="moveClass">
+            <mat-form-field>
+                <mat-label>
+                    {{dummyAutocompleteData.question.text}}
+                </mat-label>
+                <input
+                    matInput
+                    [placeholder]="dummyAutocompleteData.input.placeholderValue"
+                    [matAutocomplete]="auto"
+                    [formControl]="autoCtrl">
+                
+                <!--autoActiveFirstOption will allow to highlight first value when type-->
+                <mat-autocomplete #auto="matAutocomplete" autoActiveFirstOption>
+                    <mat-option
+                        *ngFor="let item of fileteredItems | async"
+                        [value]="item.value">
+                        <span>
+                            {{item.label}}
+                        </span>
+                    </mat-option>
+                </mat-autocomplete>
+            </mat-form-field>
+        </div>
+    </div>
+</div>
