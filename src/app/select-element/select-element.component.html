@@ -1,1 +1,31 @@
-<p>select-element works!</p>
+<div class="row">
+    <div class="col-md-4">
+
+        <!--This below div is used to display a dropdown list-->
+        <div class="moveClass">
+            <mat-form-field class="blockPosition" appearance="fill">
+                <mat-label>
+                    {{dummySelectData.question.text}}
+                </mat-label>
+
+                <mat-select
+                    [value]="dummySelectData.input.defaultValue"
+                    [formControl]="selectControl"
+                    required>
+
+                    <mat-option
+                        *ngFor="let item of dummySelectData.input.selectOptions"
+                        [value]="item.value">
+                            {{item.label}}
+                    </mat-option>
+
+                </mat-select>
+
+                <mat-error
+                    *ngIf="selectControl.hasError('required')">
+                        {{dummySelectData.input.requiredErrorMsg}}
+                </mat-error>
+            </mat-form-field>
+        </div>
+    </div>
+</div>
