@@ -1,1 +1,67 @@
-<p>input-element works!</p>
+<div class="row">
+    <div class="col-md-6">
+
+        <!--This div is used to display Input textbox with type text-->
+        <div
+            *ngIf="dummyInputData.input.inputType === 'text'"
+            class="moveClass">
+            
+            <mat-form-field class="blockPosition" appearance="fill">
+                <mat-label>
+                    {{dummyInputData.question.text}}
+                </mat-label>
+
+                <input 
+                    [type]="dummyInputData.input.inputType"
+                    matInput
+                    [placeholder]="dummyInputData.input.placeholderValue"
+                    [attr.maxlength]="dummyInputData.input.maxlength"
+                    [formControl]="inputTextControl"
+                    required>
+
+                <mat-error
+                    *ngIf="inputTextControl.hasError('required')">
+                    {{dummyInputData.input.requiredErrorMsg}}
+                </mat-error>
+
+                <mat-error
+                    *ngIf="inputTextControl.hasError('email')">
+                    {{dummyInputData.input.emailErrorMsg}}
+                </mat-error>
+
+            </mat-form-field>
+
+        </div>
+
+        <!--This div is used to display Input textbox with type number-->
+        <div
+            *ngIf="dummyInputData.input.inputType === 'number'"
+            class="moveClass">
+            
+            <mat-form-field class="blockPosition" appearance="fill">
+                <mat-label>
+                    {{dummyInputData.question.text}}
+                </mat-label>
+
+                <input 
+                    [type]="dummyInputData.input.inputType"
+                    matInput
+                    [placeholder]="dummyInputData.input.placeholderValue"
+                    [attr.maxlength]="dummyInputData.input.maxlength"
+                    [value]="dummyInputData.input.defaultValue"
+                    [formControl]="inputNumberControl"
+                    required>
+
+                <mat-error
+                    *ngIf="inputTextControl.hasError('required')">
+                    {{dummyInputData.input.requiredErrorMsg}}
+                </mat-error>
+
+
+            </mat-form-field>
+
+        </div>
+
+
+    </div>
+</div>
