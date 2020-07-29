@@ -1,0 +1,458 @@
+{
+    "interviews": [
+      {
+        "id": 0,
+        "client": {
+          "firstName": "Arpit",
+          "lastName": "Rathod",
+          "email": "arpit.rathod@testmail.com",
+          "age": 0,
+          "annualIncome": 0.0
+        },
+        "interview": {
+          "interviewId": 0,
+          "sections": [
+            {
+              "sectionId": 1,
+              "sectionPosition": 1,
+              "displayText": "Current Body Measurements",
+              "description": "This section includes information such as height and weight",
+              "questionInputs": [
+                {
+                  "order": 1,
+                  "questionInputId": 1,
+                  "question": {
+                    "text": "Height (Feet)"
+                  },
+                  "input": {
+                    "maxLength": 3,
+                    "rowCount": 1,
+                    "columnCount": 1,
+                    "minimumValue": 1.0,
+                    "maximumValue": 500.0,
+                    "interval": 0.0,
+                    "required": true,
+                    "type": "input",
+                    "inputType": "number",
+                    "placeholderValue": "ex., 150",
+                    "requiredErrorMsg": "Current weight is required",
+                    "selectOptions":[{
+                       "label": "Text",
+                       "value": "Text"
+                      }],
+                    "radioCheckboxOptions": [ "Text", "Text" ]
+                  },
+                  "answer":""
+                },
+                {
+                  "order": 2,
+                  "questionInputId": 2,
+                  "question": {
+                    "text": "Height"
+                  },
+                  "input": {
+                    "maxLength": 3,
+                    "rowCount": 1,
+                    "columnCount": 1,
+                    "minimumValue": 1.0,
+                    "maximumValue": 120.0,
+                    "interval": 0.0,
+                    "required": true,
+                    "type": "slider",
+                    "inputType": "number",
+                    "placeholderValue": "ex., 150",
+                    "requiredErrorMsg": "Height is required",
+                    "selectOptions":[{
+                       "label": "Text",
+                       "value": "Text"
+                      }],
+                    "radioCheckboxOptions": [ "Text", "Text" ]
+                  },
+                  "answer":""
+                }
+              ]
+            },
+            {
+              "sectionId": 2,
+              "sectionPosition": 2,
+              "displayText": "Medical History",
+              "description": "This section includes information related to person history",
+              "questionInputs": [
+                {
+                  "order": 1,
+                  "questionInputId": 1,
+                  "question": {
+                    "text": "Have you ever been diagnosed, treated, tested positive for, or been given medical advice by a member of the medical profession for any of the following"
+                  },
+                  "input": {
+                    "maxLength": 3,
+                    "rowCount": 1,
+                    "columnCount": 1,
+                    "minimumValue": 1.0,
+                    "maximumValue": 1.0,
+                    "interval": 2.5,
+                    "required": true,
+                    "type": "checkbox",
+                    "inputType": "number",
+                    "placeholderValue": "ex., 150",
+                    "requiredErrorMsg": "select at least one option",
+                    "selectOptions":[
+                      {
+                       "label": "Congestive Heart Failure",
+                       "value": "false"
+                      },
+                      {
+                       "label": "Stroke or TIA",
+                       "value": "false"
+                      },
+                      {
+                       "label": "Weak or Failing Kidneys Disease",
+                       "value": "false"
+                      },
+                      {
+                       "label": "Emphysema",
+                       "value": "false"
+                      },
+                      {
+                       "label": "Anemia",
+                       "value": "false"
+                      },
+                      {
+                       "label": "Melanoma",
+                       "value": "false"
+                      },
+                      {
+                       "label": "Non skin-related cancer",
+                       "value": "false"
+                      },
+                      {
+                       "label": "None",
+                       "value": "false"
+                      }
+                      ],
+                    "radioCheckboxOptions": [ "Text", "Text" ]
+                  },
+                  "answer":""
+                }
+              ]
+            },
+            {
+              "sectionId": 3,
+              "sectionPosition": 3,
+              "displayText": "Exercise",
+              "description": "This section includes information for exercise",
+              "questionInputs": [
+                {
+                  "order": 1,
+                  "questionInputId": 1,
+                  "question": {
+                    "text": "Frequency of Exercise (times per week)"
+                  },
+                  "input": {
+                    "maxLength": 1,
+                    "rowCount": 1,
+                    "columnCount": 1,
+                    "minimumValue": 1.0,
+                    "maximumValue": 1.0,
+                    "interval": 0.0,
+                    "required": true,
+                    "type": "radio",
+                    "inputType": "number",
+                    "placeholderValue": "select at least one option",
+                    "requiredErrorMsg": "Frequency field is required",
+                    "selectOptions":[
+                      {
+                       "label": "0",
+                       "value": "0"
+                      },
+                      {
+                       "label": "1-2",
+                       "value": "1-2"
+                      },
+                      {
+                       "label": "3-4",
+                       "value": "3-4"
+                      },
+                      {
+                       "label": "5-7",
+                       "value": "5-7"
+                      }
+                      ],
+                    "radioCheckboxOptions": [ "Text", "Text" ]
+                  },
+                  "answer":""
+                },
+                {
+                  "order": 2,
+                  "questionInputId": 2,
+                  "question": {
+                    "text": "Duration of Exercise (minutes per session)"
+                  },
+                  "input": {
+                    "maxLength": 1,
+                    "rowCount": 1,
+                    "columnCount": 1,
+                    "minimumValue": 1.0,
+                    "maximumValue": 1.0,
+                    "interval": 1.0,
+                    "required": true,
+                    "type": "radio",
+                    "inputType": "number",
+                    "placeholderValue": "ex., 150",
+                    "requiredErrorMsg": "Duration field is required",
+                    "selectOptions":[
+                      {
+                       "label": "Less than 15",
+                       "value": "Less than 15"
+                      },
+                      {
+                       "label": "15 to 30",
+                       "value": "15-30"
+                      },
+                      {
+                       "label": "Greater than 30",
+                       "value": "Greater than 30"
+                      }
+                      ],
+                    "radioCheckboxOptions": [ "Text", "Text" ]
+                  },
+                  "answer":""
+                }
+              ]
+            }
+          ],
+          "interviewVersion":1.0,
+          "productType": "life"
+        },
+        "caseId":"TEST01",
+        "interviewStatus":"Sent"
+      },
+      {
+        "id": 1,
+        "client": {
+          "firstName": "Kishan",
+          "lastName": "Soni",
+          "email": "kishan.soni@testmail.com",
+          "age": 0,
+          "annualIncome": 0.0
+        },
+        "interview": {
+          "interviewId": 0,
+          "sections": [
+            {
+              "sectionId": 1,
+              "sectionPosition": 1,
+              "displayText": "Current Body Measurements",
+              "description": "This section includes information such as height and weight",
+              "questionInputs": [
+                {
+                  "order": 1,
+                  "questionInputId": 1,
+                  "question": {
+                    "text": "Height (Feet)"
+                  },
+                  "input": {
+                    "maxLength": 3,
+                    "rowCount": 1,
+                    "columnCount": 1,
+                    "minimumValue": 1.0,
+                    "maximumValue": 500.0,
+                    "interval": 0.0,
+                    "required": true,
+                    "type": "input",
+                    "inputType": "number",
+                    "placeholderValue": "ex., 150",
+                    "requiredErrorMsg": "Current weight is required",
+                    "selectOptions":[{
+                       "label": "Text",
+                       "value": "Text"
+                      }],
+                    "radioCheckboxOptions": [ "Text", "Text" ]
+                  },
+                  "answer":""
+                },
+                {
+                  "order": 2,
+                  "questionInputId": 2,
+                  "question": {
+                    "text": "Height"
+                  },
+                  "input": {
+                    "maxLength": 3,
+                    "rowCount": 1,
+                    "columnCount": 1,
+                    "minimumValue": 1.0,
+                    "maximumValue": 120.0,
+                    "interval": 0.0,
+                    "required": true,
+                    "type": "slider",
+                    "inputType": "number",
+                    "placeholderValue": "ex., 150",
+                    "requiredErrorMsg": "Height is required",
+                    "selectOptions":[{
+                       "label": "Text",
+                       "value": "Text"
+                      }],
+                    "radioCheckboxOptions": [ "Text", "Text" ]
+                  },
+                  "answer":""
+                }
+              ]
+            },
+            {
+              "sectionId": 2,
+              "sectionPosition": 2,
+              "displayText": "Medical History",
+              "description": "This section includes information related to person history",
+              "questionInputs": [
+                {
+                  "order": 1,
+                  "questionInputId": 1,
+                  "question": {
+                    "text": "Have you ever been diagnosed, treated, tested positive for, or been given medical advice by a member of the medical profession for any of the following"
+                  },
+                  "input": {
+                    "maxLength": 3,
+                    "rowCount": 1,
+                    "columnCount": 1,
+                    "minimumValue": 1.0,
+                    "maximumValue": 1.0,
+                    "interval": 2.5,
+                    "required": true,
+                    "type": "checkbox",
+                    "inputType": "number",
+                    "placeholderValue": "ex., 150",
+                    "requiredErrorMsg": "select at least one option",
+                    "selectOptions":[
+                      {
+                       "label": "Congestive Heart Failure",
+                       "value": "false"
+                      },
+                      {
+                       "label": "Stroke or TIA",
+                       "value": "false"
+                      },
+                      {
+                       "label": "Weak or Failing Kidneys Disease",
+                       "value": "false"
+                      },
+                      {
+                       "label": "Emphysema",
+                       "value": "false"
+                      },
+                      {
+                       "label": "Anemia",
+                       "value": "false"
+                      },
+                      {
+                       "label": "Melanoma",
+                       "value": "false"
+                      },
+                      {
+                       "label": "Non skin-related cancer",
+                       "value": "false"
+                      },
+                      {
+                       "label": "None",
+                       "value": "false"
+                      }
+                      ],
+                    "radioCheckboxOptions": [ "Text", "Text" ]
+                  },
+                  "answer":""
+                }
+              ]
+            },
+            {
+              "sectionId": 3,
+              "sectionPosition": 3,
+              "displayText": "Exercise",
+              "description": "This section includes information for exercise",
+              "questionInputs": [
+                {
+                  "order": 1,
+                  "questionInputId": 1,
+                  "question": {
+                    "text": "Frequency of Exercise (times per week)"
+                  },
+                  "input": {
+                    "maxLength": 1,
+                    "rowCount": 1,
+                    "columnCount": 1,
+                    "minimumValue": 1.0,
+                    "maximumValue": 1.0,
+                    "interval": 0.0,
+                    "required": true,
+                    "type": "radio",
+                    "inputType": "number",
+                    "placeholderValue": "select at least one option",
+                    "requiredErrorMsg": "Frequency field is required",
+                    "selectOptions":[
+                      {
+                       "label": "0",
+                       "value": "0"
+                      },
+                      {
+                       "label": "1-2",
+                       "value": "1-2"
+                      },
+                      {
+                       "label": "3-4",
+                       "value": "3-4"
+                      },
+                      {
+                       "label": "5-7",
+                       "value": "5-7"
+                      }
+                      ],
+                    "radioCheckboxOptions": [ "Text", "Text" ]
+                  },
+                  "answer":""
+                },
+                {
+                  "order": 2,
+                  "questionInputId": 2,
+                  "question": {
+                    "text": "Duration of Exercise (minutes per session)"
+                  },
+                  "input": {
+                    "maxLength": 1,
+                    "rowCount": 1,
+                    "columnCount": 1,
+                    "minimumValue": 1.0,
+                    "maximumValue": 1.0,
+                    "interval": 1.0,
+                    "required": true,
+                    "type": "radio",
+                    "inputType": "number",
+                    "placeholderValue": "ex., 150",
+                    "requiredErrorMsg": "Duration field is required",
+                    "selectOptions":[
+                      {
+                       "label": "Less than 15",
+                       "value": "Less than 15"
+                      },
+                      {
+                       "label": "15 to 30",
+                       "value": "15-30"
+                      },
+                      {
+                       "label": "Greater than 30",
+                       "value": "Greater than 30"
+                      }
+                      ],
+                    "radioCheckboxOptions": [ "Text", "Text" ]
+                  },
+                  "answer":""
+                }
+              ]
+            }
+          ],
+          "interviewVersion":1.0,
+          "productType": "life"
+        },
+        "caseId":"TEST02",
+        "interviewStatus":"Sent"
+      }
+    ]
+  }
