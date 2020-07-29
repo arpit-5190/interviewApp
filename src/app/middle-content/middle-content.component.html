@@ -52,7 +52,8 @@
                         <!--This custom html elemnt selector is used to display select dropdown elements-->
                         <app-select-element
                             *ngIf="listItem.input.type === 'select'"
-                            [dummySelectData]="listItem">
+                            [dummySelectData]="listItem"
+                            (onSelectValueChange)="getAnswer($event)">
                         </app-select-element>
 
                         <!--This custom html element selector is used to display checkbox elements-->
