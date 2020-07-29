@@ -15,7 +15,8 @@
                     matInput
                     [placeholder]="dummyTextAreaData.input.placeholderValue"
                     [formControl]="textareaControl"
-                    [required]="dummyTextAreaData.input.required">
+                    [required]="dummyTextAreaData.input.required"
+                    (change)="textAreaChange($event.target.value)">
                 </textarea>
 
                 <mat-error

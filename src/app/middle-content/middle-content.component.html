@@ -39,7 +39,8 @@
                         <!--This custom html element selector is used to display Textarea elements-->
                         <app-textarea-element
                             *ngIf="listItem.input.type === 'textarea'"
-                            [dummyTextAreaData]="listItem">
+                            [dummyTextAreaData]="listItem"
+                            (onTextAreaValueChange)="getAnswer($event)">
                         </app-textarea-element>
 
                         <!-- This custom html element selector is used to display Radio elements-->
