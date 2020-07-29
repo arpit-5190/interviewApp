@@ -7,7 +7,7 @@
                 [stepControl]="verticalFormGroup"
                 *ngFor="let category of dummyCategoryData; first as f; last as l">
 
-                <form [formGroup]="verticalFormGroup">
+                <form [formGroup]="verticalFormGroup" (ngSubmit)="onFormSubmit()">
                     <ng-template matStepLabel>
                         <div>
                             {{category.displayText}}
@@ -25,13 +25,15 @@
                         <!-- This custom html element selector is used to display autocomplete dropdown-->
                         <app-autocomplete-element
                             *ngIf="listItem.input.type === 'autocomplete'"
-                            [dummyAutocompleteData]="listItem">
+                            [dummyAutocompleteData]="listItem"
+                            (onAutoCompleteValueChange)="getAnswer($event)">
                         </app-autocomplete-element>
 
                         <!--This custom html element selector is used to display input elements-->
                         <app-input-element
                             *ngIf="listItem.input.type === 'input'"
-                            [dummyInputData]="listItem">
+                            [dummyInputData]="listItem"
+                            (onInputValueChange)="getAnswer($event)">
                         </app-input-element>
 
                         <!--This custom html element selector is used to display Textarea elements-->
@@ -61,7 +63,8 @@
                         <!--This custom html element selector is used to display calendar-->
                         <app-datepicker-element
                             *ngIf="listItem.input.type === 'datepicker'"
-                            [dummyDatepickerData] = "listItem">
+                            [dummyDatepickerData] = "listItem"
+                            (onDatepickerValueChange)="getAnswer($event)">
 
                         </app-datepicker-element>
                     </div>
@@ -91,7 +94,7 @@
 </div>
 
 <!--This section is used to display topbar button which navigates to the top of the page-->
-<div class="row" style="margin-top: 5px; bottom: 70px;" class="fixed-bottom">
+<!--<div class="row" style="margin-top: 5px; bottom: 70px;" class="fixed-bottom">
     <div class="com-md-12">
         <button
             color="primary"
@@ -104,4 +107,4 @@
         </button>
 
     </div>
-</div>
+</div>-->

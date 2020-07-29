@@ -17,6 +17,7 @@
                     [placeholder]="dummyInputData.input.placeholderValue"
                     [attr.maxlength]="dummyInputData.input.maxlength"
                     [formControl]="inputTextControl"
+                    (change)="inputChange($event.target.value)"
                     required>
 
                 <mat-error
@@ -24,10 +25,10 @@
                     {{dummyInputData.input.requiredErrorMsg}}
                 </mat-error>
 
-                <mat-error
+                <!--<mat-error
                     *ngIf="inputTextControl.hasError('email')">
                     {{dummyInputData.input.emailErrorMsg}}
-                </mat-error>
+                </mat-error>-->
 
             </mat-form-field>
 
@@ -50,6 +51,7 @@
                     [attr.maxlength]="dummyInputData.input.maxlength"
                     [value]="dummyInputData.input.defaultValue"
                     [formControl]="inputNumberControl"
+                    (change)="inputChange($event.target.value)"
                     required>
 
                 <mat-error

@@ -1,0 +1,75 @@
+<div class="row">
+    <div class="col-md-12 col-sm-12">
+        <div id="codeLabel">
+            <p>
+                Please enter the 6-digit code provided by your agent:
+            </p>
+        </div>
+        <div style="text-align: center;">
+            <input 
+                type="tel"
+                matInput
+                #input1
+                autofocus
+                class="inputBox"
+                maxlength="1"
+                required
+                (keypress)="numberOnly($event)"
+                (input)="onInputEntry($event,input2)">
+            <input 
+                type="tel"
+                matInput
+                #input2
+                autofocus
+                class="inputBox"
+                maxlength="1"
+                required
+                style="margin: 0px 10px;"
+                (keypress)="numberOnly($event)"
+                (input)="onInputEntry($event,input3)">
+            <input 
+                type="tel"
+                matInput
+                #input3
+                autofocus
+                class="inputBox"
+                maxlength="1"
+                required
+                (keypress)="numberOnly($event)"
+                (input)="onInputEntry($event,input4)">
+            <span class="icon">-</span>
+            <input 
+                type="tel"
+                matInput
+                #input4
+                autofocus
+                class="inputBox"
+                maxlength="1"
+                required
+                (keypress)="numberOnly($event)"
+                (input)="onInputEntry($event,input5)">
+            <input 
+                type="tel"
+                matInput
+                #input5
+                autofocus
+                class="inputBox"
+                style="margin: 0px 10px;"
+                maxlength="1"
+                required
+                (keypress)="numberOnly($event)"
+                (input)="onInputEntry($event,input6)">
+            <input 
+                type="tel"
+                matInput
+                #input6
+                autofocus
+                class="inputBox"
+                maxlength="1"
+                required
+                (keypress)="numberOnly($event)"
+                (input)="inputChange(input1,input2,input3,input4,input5,input6)">
+        </div>
+        <p id="errorCode">{{showErrorMsg}}</p>
+    </div>
+</div>

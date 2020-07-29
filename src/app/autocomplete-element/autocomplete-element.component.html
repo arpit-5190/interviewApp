@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-6">
         <div class="moveClass">
             <mat-form-field>
                 <mat-label>
@@ -9,10 +9,11 @@
                     matInput
                     [placeholder]="dummyAutocompleteData.input.placeholderValue"
                     [matAutocomplete]="auto"
-                    [formControl]="autoCtrl">
+                    [formControl]="autoControl"
+                    required>
                 
                 <!--autoActiveFirstOption will allow to highlight first value when type-->
-                <mat-autocomplete #auto="matAutocomplete" autoActiveFirstOption>
+                <mat-autocomplete #auto="matAutocomplete" autoActiveFirstOption (optionSelected)="autoCompleteChange($event.option.value)">
                     <mat-option
                         *ngFor="let item of filteredItems | async"
                         [value]="item.value">
@@ -21,6 +22,10 @@
                         </span>
                     </mat-option>
                 </mat-autocomplete>
+                <mat-error
+                    *ngIf="autoControl.hasError('required')">
+                    {{ dummyAutocompleteData.input.requiredErrorMsg}}
+                </mat-error>
             </mat-form-field>
         </div>
     </div>

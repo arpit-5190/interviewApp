@@ -40,6 +40,7 @@ import { MatRippleModule } from '@angular/material/core';
 
 //Import httpclient module
 import { HttpClientModule } from '@angular/common/http';
+import { CustomerCodeEntryComponent } from './customer-code-entry/customer-code-entry.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { HttpClientModule } from '@angular/common/http';
     RadioElementComponent,
     SelectElementComponent,
     TextareaElementComponent,
-    SliderElmentComponent
+    SliderElmentComponent,
+    CustomerCodeEntryComponent
   ],
   imports: [
     BrowserModule,

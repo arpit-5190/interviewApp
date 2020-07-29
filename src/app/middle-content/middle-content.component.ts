@@ -33,10 +33,70 @@ export class MiddleContentComponent implements OnInit {
 
   ngOnInit():void {
     this.verticalFormGroup = this._formBuilder.group({
-      verticalCtrl: ['', Validators.required]
+      //verticalCtrl: ['', Validators.required]
     });
 
     this.deviceWidth = window.innerWidth;
+  }
+
+  postObj = {};
+
+  //This event is used to dubmit section information to local JSON server and perform POST operation
+  onFormSubmit = () => {
+    console.log("Section Data", this.dummyCategoryData);
+
+    this.httpService.sendGetRequest()
+      .subscribe(
+        (data:any[]) => {
+          console.log("Main Data", data);
+          this.updateValue(data);
+          console.log("Updated Data", data);
+
+          this.postObj = data;
+          /*this.httpService.save(this.postObj).subscribe(
+            (data1) => {
+              console.log("Post data operation", data1)
+            },
+            (error:any) => console.log(error)
+          )*/
+
+          this.httpService.updateInterview(data).subscribe(
+            data1=> {
+              console.log("Put operation data");
+            }
+          )
+        }
+      )
+  }
+
+
+  //This function will update question answer and return
+  public updateValue = (value) => {
+    for(let section of value.interview.sections){
+      for(let question of section.questionInputs){
+        for(let formval of this.formValues){
+          if(question.question.text === formval.label){
+            question.question.answer = formval.value;
+          }
+        }
+      }
+    }
+  }
+  //Create a global array variable to store all the question answer for section
+  public formValues = [];
+
+  public getAnswer(e):void {
+    this.formValues.push(e);
+
+    //Remove duplicates from the array object
+    this.formValues = this.formValues.filter((item,index)=>{
+      console.log("Item number", item);
+      console.log("Item number index", index);
+      return this.formValues.indexOf(item) === index;
+    })
+
+    console.log("Get data from Input Element", e);
+    console.log("Form Data Values", this.formValues);
   }
 
 }

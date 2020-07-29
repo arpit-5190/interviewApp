@@ -1,0 +1,63 @@
+//Define styles for input boxes
+.inputBox{
+    width:35px;
+    height: 55px;
+    text-align: center;
+    border:2px solid grey;
+    font-size:30px;
+    border-radius: 5px;
+}
+
+//Define styles for valid values
+input:valid{
+    border:2px solid green;
+}
+
+input:focus{
+    border: 1px solid grey;
+}
+
+//Define styles for HLQ title
+#hlqlabel{
+    background-color: beige;
+
+    >div{
+        text-align: center;
+        font-weight: 500;
+        >label{
+            color: purple;
+            margin: auto;
+        }
+    }
+}
+
+//Define styles for interview complete message
+#completeMsg{
+    text-align: center;
+    font-size: 20px;
+    line-height: 26px;
+    margin-top: 100px;
+}
+
+//Define styles for code label
+#codeLabel{
+    text-align: center;
+    margin: 80px 0px;
+    font-size: 24px;
+    line-height: 35px;
+    font-weight: 500;
+}
+
+//Define styles for icon
+.icon{
+    margin: 0px 10px;
+    font-size: 40px;
+}
+
+//Define styles for error message
+#errorCode{
+    text-align: center;
+    font-size: 20px;
+    margin: 20px;
+    color: red;
+}

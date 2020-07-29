@@ -1,6 +1,6 @@
 import { Observable } from 'rxjs';
-import { Component, OnInit, Input } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { FormControl, Validators } from '@angular/forms';
 import { map, startWith } from 'rxjs/operators'
 
 //Define an interface
@@ -17,23 +17,13 @@ export interface autoData{
 
 export class AutocompleteElementComponent implements OnInit {
 
-  //Define Form Control Instance
-  autoCtrl = new FormControl();
-
-  //Define a property which contains a list of items
-  filteredItems:Observable<autoData[]>;
-
-  //Define private property for input
+  //Define private property for Input
   private _dummyAutocompleteData:[];
-
-  //Define public property for store the list of items received from results
-  autoListItems:autoData[];
 
   //Define getter method
   get dummyAutocompleteData():any {
     return this._dummyAutocompleteData;
   }
-
 
   //Define setter method
   @Input()
@@ -43,10 +33,32 @@ export class AutocompleteElementComponent implements OnInit {
   }
 
 
+  //Define Form Control Instance
+  autoControl = new FormControl();
+
+  //Define output variable to pass the value of the question to middle component
+  @Output() public onAutocompleteValueChange = new EventEmitter();
+
+  //Define property to store autocomplete value
+  autoCompleteValue:any = {};
+
+  //Define an event which is called while input text field will change value
+  autoCompleteChange = (e:any): void => {
+    this.autoCompleteValue["label"] = this.dummyAutocompleteData.question.text;
+    this.autoCompleteValue["value"] = e;
+    this.onAutocompleteValueChange.emit(this.autoCompleteValue);
+  }
+
+  //Define a property which contains a list of items
+  filteredItems:Observable<autoData[]>;
+
+  //Define public property for store the list of items received from results
+  autoListItems:autoData[];
+
   constructor() {
 
     //Define a method which will return the results from the list when user enter
-    this.filteredItems = this.autoCtrl.valueChanges
+    this.filteredItems = this.autoControl.valueChanges
       .pipe(
         startWith(''),
         map(item => item ? this._filterItems(item) :
@@ -62,6 +74,10 @@ export class AutocompleteElementComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.autoCompleteValue["label"] = this.dummyAutocompleteData.question.text;
+    this.autoCompleteValue["value"] = this.dummyAutocompleteData.question.answer;
+
+    this.autoControl = new FormControl(this.autoCompleteValue["value"], Validators.required);
   }
 
 }

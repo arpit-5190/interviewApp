@@ -6,10 +6,14 @@
                 <mat-label>
                     {{dummyDatepickerData.question.text}}
                 </mat-label>
+                
                 <input 
                     matInput
                     [matDatepicker]="picker"
-                    [placeholder]="dummyDatepickerData.input.placeholderValue">
+                    [placeholder]="dummyDatepickerData.input.placeholderValue"
+                    required
+                    [formControl]="datepickerControl"
+                    (dateChange)="datepickerChange($event.value)">
 
                 <mat-datepicker-toggle
                     matSuffix [for]="picker">
@@ -17,6 +21,11 @@
 
                 <mat-datepicker #picker>
                 </mat-datepicker>
+
+                <mat-error
+                    *ngIf="datepickerControl.hasError('required')">
+                    {{ dummyDatepickerData.input.requiredErrorMsg}}
+                </mat-error>
             </mat-form-field>
         </div>
     </div>
