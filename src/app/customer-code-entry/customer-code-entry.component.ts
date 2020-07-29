@@ -82,16 +82,16 @@ export class CustomerCodeEntryComponent implements OnInit {
     this.restservice.initialize(this.clientId);
 
     //Retrieve customer code
-    this.restservice.retrieveCustomerCode(this.clientId)
+    /*this.restservice.retrieveCustomerCode(this.clientId)
       .subscribe(
         (data) => {
           this.customerCode = data;
         }
       )
-
+        */
 
     //Retrieve Interview status to check what should display
-    this.restservice.retrieveInterviewStatus(this.clientId)
+    /*this.restservice.retrieveInterviewStatus(this.clientId)
         .subscribe(
           (data)=>{
             this.interviewStatus = data["interviewStatus"];
@@ -104,7 +104,7 @@ export class CustomerCodeEntryComponent implements OnInit {
             }
           }
         )
-
+          */
     //Retrieve customer information
     this.restservice.sendGetRequest()
       .subscribe(
