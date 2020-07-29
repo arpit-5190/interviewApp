@@ -45,7 +45,8 @@
                         <!-- This custom html element selector is used to display Radio elements-->
                         <app-radio-element
                             *ngIf="listItem.input.type === 'radio'"
-                            [dummyRadioData]="listItem">
+                            [dummyRadioData]="listItem"
+                            (onRadioValueChange)="getAnswer($event)">
                         </app-radio-element>
 
                         <!--This custom html elemnt selector is used to display select dropdown elements-->

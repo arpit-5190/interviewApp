@@ -1,10 +1,13 @@
 <div class="row">
-    <div class="col-md-8">
+    <div class="col-md-6">
 
         <!--This below div is used to display radio button-->
         <div class="moveClass">
             <mat-radio-group
-                class="blockPosition">
+                class="blockPosition"
+                [formControl]="radioControl"
+                (change)="radioChange($event.value)"
+                required>
                 <mat-label>
                     {{dummyRadioData.question.text}}
                 </mat-label>
@@ -16,6 +19,10 @@
                     {{item}}
                 </mat-radio-button>
             </mat-radio-group>
+            <mat-error
+                *ngIf="radioControl.hasError('required')">
+                {{dummyRadioData.input.requiredErrorMsg}}
+            </mat-error>
         </div>
         <hr>
     </div>
