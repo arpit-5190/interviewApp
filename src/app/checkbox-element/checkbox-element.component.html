@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="col-md-8">
+    <div class="col-md-6">
         <!--this below div is used to display checkbox list-->
         <div class="moveClass">
             <mat-label
@@ -7,12 +7,14 @@
                 {{dummyCheckboxData.question.text}}
             </mat-label>
             <mat-checkbox
-                *ngFor="let item of dummyCheckboxData.input.radioCheckboxOptions"
+                *ngFor="let item of dummyCheckboxData.input.selectOptions"
                 [value]="item"
+                (change)="onChange($event,i,item)"
                 class="blockPosition checkListItem"
                 labelPosition="after"
-                [checked]="item===dummyCheckboxData.input.defaultValue ? true : false">
-                {{item}}
+                [disabled]="item.disable"
+                [checked]="item.value == 'false' ? false : true">
+                {{ item.label }}
             </mat-checkbox>
         </div>
         <hr>

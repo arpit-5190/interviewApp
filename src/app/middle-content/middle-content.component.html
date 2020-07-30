@@ -60,7 +60,8 @@
                         <!--This custom html element selector is used to display checkbox elements-->
                         <app-checkbox-element
                             *ngIf="listItem.input.type === 'checkbox'"
-                            [dummyCheckboxData]="listItem">
+                            [dummyCheckboxData]="listItem"
+                            (onCheckboxChange)="getAnswer($event)">
                         </app-checkbox-element>
 
                         <!--This custom html element selector is used to display calendar-->
