@@ -2,3 +2,13 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+//Define global snackbar background color
+.purple-snackbar{
+    background: white;
+}
+
+//Define the styles for stepper header
+.mat-step-header{
+    margin-bottom: 5px !important;
+}

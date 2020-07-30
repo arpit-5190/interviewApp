@@ -1,9 +1,12 @@
-import { Router } from '@angular/router';
-import { RestApiService } from './../rest-api.service';
 import { Component, OnInit, Input } from '@angular/core';
-import {STEPPER_GLOBAL_OPTIONS} from '@angular/cdk/stepper';
 import { FormGroup, FormBuilder, Validators} from '@angular/forms';
+import {STEPPER_GLOBAL_OPTIONS} from '@angular/cdk/stepper';
+import { Router } from '@angular/router';
 import { MatSnackBar, MatSnackBarHorizontalPosition, MatSnackBarVerticalPosition } from '@angular/material/snack-bar';
+import { RestApiService } from './../rest-api.service';
+
+
+
 
 @Component({
   selector: 'app-middle-content',
@@ -175,7 +178,7 @@ export class MiddleContentComponent implements OnInit {
 
         //Update question text label and answer properties for POST method
         question.question.text = question.question.text.includes('"') ? question.question.text.substring(1, question.question.text.length-1) : question.question.text;
-        question.answer = question.answer.includes('"') ? question.answer.substring(1, question.answer.length-1) : question.answer;
+        //question.answer = question.answer.includes('"') ? question.answer.substring(1, question.answer.length-1) : question.answer;
 
         //Define for loop for formatting select options
         for(let selection of question.input.selectOptions){
@@ -207,6 +210,7 @@ export class MiddleContentComponent implements OnInit {
 
   //Confirmation snackbar which shows review and shubmit button
   openConfirmationMessage(){
+
     this._snackBar.openFromComponent(DisplayReviewComponent, {
       horizontalPosition: this.horizontalPosition,
       verticalPosition: this.verticalPosition,
@@ -216,11 +220,15 @@ export class MiddleContentComponent implements OnInit {
 
   //Generic Error Message Snack bar
   openGenericMessage(){
-    this._snackBar.openFromComponent(DisplayErrorMessageComponent,{
-      horizontalPosition: this.horizontalPosition,
-      verticalPosition: this.verticalPosition,
-      panelClass: ['purple-snackbar']
-    });
+    console.log("Enter into Generic meesage")
+    this._snackBar.openFromComponent(
+      DisplayErrorMessageComponent,
+      {
+        horizontalPosition:this.horizontalPosition,
+        verticalPosition:this.verticalPosition,
+        panelClass:['purple-snackbar'],
+      }
+    );
   }
 
 }
