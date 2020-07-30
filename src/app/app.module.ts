@@ -38,6 +38,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatRippleModule } from '@angular/material/core';
 import { MatSliderModule} from '@angular/material/slider';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 //Import httpclient module
 import { HttpClientModule } from '@angular/common/http';
@@ -79,7 +80,8 @@ import { CustomerCodeEntryComponent } from './customer-code-entry/customer-code-
     MatExpansionModule,
     MatRippleModule,
     HttpClientModule,
-    MatSliderModule
+    MatSliderModule,
+    MatTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]

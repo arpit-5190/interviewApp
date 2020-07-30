@@ -12,11 +12,20 @@
                     {{dummyRadioData.question.text}}
                 </mat-label>
 
+                <mat-icon
+                    style="display: block; margin: -22px 0px 0px 250px; color: grey;"
+                    #tooltip="matTooltip"
+                    *ngIf="displayTooltip"
+                    matTooltip="Examples"
+                    matTooltipPosition="above" >
+                    info
+                </mat-icon>
+                
                 <mat-radio-button
-                    *ngFor="let item of dummyRadioData.input.radioCheckboxOptions"
-                    [value]="item"
+                    *ngFor="let item of dummyRadioData.input.selectOptions"
+                    [value]="item.value"
                     class="radioElements">
-                    {{item}}
+                    {{ item.label }}
                 </mat-radio-button>
             </mat-radio-group>
             <mat-error
