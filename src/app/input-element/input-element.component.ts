@@ -43,7 +43,8 @@ export class InputElementComponent implements OnInit {
     console.log("Input Data", this.dummyInputData);
 
     this.inputValue["label"] = this.dummyInputData.question.text;
-    this.inputValue["value"] = this.dummyInputData.question.answer;
+    this.inputValue["value"] = this.dummyInputData.answer;
+    
 
     this.inputNumberControl = new FormControl(this.inputValue["value"], Validators.required)
     this.inputTextControl = new FormControl(this.inputValue["value"], Validators.required)

@@ -76,7 +76,7 @@ export class MiddleContentComponent implements OnInit {
       for(let question of section.questionInputs){
         for(let formval of this.formValues){
           if(question.question.text === formval.label){
-            question.question.answer = formval.value;
+            question.answer = formval.value;
           }
         }
       }

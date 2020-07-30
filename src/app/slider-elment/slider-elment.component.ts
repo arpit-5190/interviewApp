@@ -25,7 +25,7 @@ export class SliderElmentComponent implements OnInit {
   //Define an event which is called while slider will change value
   sliderChange = (e:any):void => {
     this.sliderValue["label"] = this.dummySliderData.question.text;
-    this.sliderValue["value"] = '"' + e + '"';
+    this.sliderValue["value"] =  e ;
     this.conversion(e);
     this.onSliderValueChange.emit(this.sliderValue);
   }

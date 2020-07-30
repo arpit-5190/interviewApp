@@ -45,11 +45,10 @@
                 </mat-label>
 
                 <input 
-                    [type]="dummyInputData.input.inputType"
+                    [type]="tel"
                     matInput
                     [placeholder]="dummyInputData.input.placeholderValue"
                     [attr.maxlength]="dummyInputData.input.maxLength"
-                    [value]="dummyInputData.input.defaultValue"
                     [formControl]="inputNumberControl"
                     (keypress)="numberOnly($event)"
                     (change)="inputChange($event.target.value)"
