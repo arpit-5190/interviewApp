@@ -68,8 +68,14 @@
                             *ngIf="listItem.input.type === 'datepicker'"
                             [dummyDatepickerData] = "listItem"
                             (onDatepickerValueChange)="getAnswer($event)">
-
                         </app-datepicker-element>
+
+                        <!--This custom html element selector is used to display slider-->
+                        <app-slider-elment
+                            *ngIf="listItem.input.type === 'slider'"
+                            [dummySliderData]="listItem"
+                            (onSliderValueChange)="getAnswer($event)">
+                        </app-slider-elment>
                     </div>
 
                     <div>

@@ -14,7 +14,7 @@
           "sections": [
             {
               "sectionId": 1,
-              "sectionPosition": 1,
+              "sectionPosition": 0,
               "displayText": "Current Body Measurements",
               "description": "This section includes information such as height and weight",
               "questionInputs": [
@@ -73,7 +73,7 @@
               ]
             },
             {
-              "sectionId": 2,
+              "sectionId": 1,
               "sectionPosition": 2,
               "displayText": "Medical History",
               "description": "This section includes information related to person history",
@@ -137,7 +137,7 @@
               ]
             },
             {
-              "sectionId": 3,
+              "sectionId": 2,
               "sectionPosition": 3,
               "displayText": "Exercise",
               "description": "This section includes information for exercise",
@@ -240,7 +240,7 @@
           "interviewId": 0,
           "sections": [
             {
-              "sectionId": 1,
+              "sectionId": 0,
               "sectionPosition": 1,
               "displayText": "Current Body Measurements",
               "description": "This section includes information such as height and weight",
@@ -300,7 +300,7 @@
               ]
             },
             {
-              "sectionId": 2,
+              "sectionId": 1,
               "sectionPosition": 2,
               "displayText": "Medical History",
               "description": "This section includes information related to person history",
@@ -364,7 +364,7 @@
               ]
             },
             {
-              "sectionId": 3,
+              "sectionId": 2,
               "sectionPosition": 3,
               "displayText": "Exercise",
               "description": "This section includes information for exercise",

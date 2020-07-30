@@ -37,6 +37,7 @@ import { MatStepperModule } from '@angular/material/stepper';
 import { MatIconModule } from '@angular/material/icon';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatRippleModule } from '@angular/material/core';
+import { MatSliderModule} from '@angular/material/slider';
 
 //Import httpclient module
 import { HttpClientModule } from '@angular/common/http';
@@ -77,7 +78,8 @@ import { CustomerCodeEntryComponent } from './customer-code-entry/customer-code-
     MatIconModule,
     MatExpansionModule,
     MatRippleModule,
-    HttpClientModule
+    HttpClientModule,
+    MatSliderModule
   ],
   providers: [],
   bootstrap: [AppComponent]

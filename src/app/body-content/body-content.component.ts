@@ -58,7 +58,7 @@ export class BodyContentComponent implements OnInit {
   //Define function which will return interview section and question information with sorted data
   public getData = (value:any) => {
     for(let section of value.interview.sections){
-      this.updatedData[section.order] = section;
+      this.updatedData[section.sectionPosition] = section;
       section.questionInputs.sort(
         function(a:any, b:any){
           return a.order - b.order;
@@ -66,6 +66,12 @@ export class BodyContentComponent implements OnInit {
       );
     }
 
+    //This function will filter any empty value from an array
+    let filtered:any = this.updatedData.filter(function(el){
+      return el != null;
+    })
+
+    this.updatedData = filtered;
     return this.updatedData;
   }
 

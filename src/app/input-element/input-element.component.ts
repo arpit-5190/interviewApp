@@ -27,11 +27,20 @@ export class InputElementComponent implements OnInit {
     this.inputValue["value"] = e;
     this.onInputValueChange.emit(this.inputValue);
   }
+
+  //Define keypress function for Input number
+  numberOnly(event): boolean{
+    const charCode = (event.which) ? event.which : event.keyCode;
+    if(charCode > 31 && (charCode < 48 || charCode >57)){
+      return false;
+    }
+    return true;
+  }
   
   constructor() { }
 
   ngOnInit(): void {
-    
+    console.log("Input Data", this.dummyInputData);
 
     this.inputValue["label"] = this.dummyInputData.question.text;
     this.inputValue["value"] = this.dummyInputData.question.answer;

@@ -1,1 +1,25 @@
-<p>slider-elment works!</p>
+<div class="row">
+    <div class="col-md-6">
+        <div class="moveClass" style="margin-top: 17px;">
+            <mat-label>
+                {{dummySliderData.question.text}}
+            </mat-label>
+
+            <mat-slider
+                thumbLabel
+                [tickInterval]="dummySliderData.input.interval"
+                [max]="dummySliderData.input.maximumValue"
+                [formControl]="sliderControl"
+                (input)="sliderChange($event.value)"
+                required>
+            </mat-slider>
+            &nbsp;&nbsp;
+            <span>{{ sliderVal }}</span>
+        </div>
+        <mat-error
+            *ngIf="sliderControl.hasError('required')">
+            {{ dummySliderData.input.requiredErrorMsg }}
+        </mat-error>
+    </div>
+
+</div>
