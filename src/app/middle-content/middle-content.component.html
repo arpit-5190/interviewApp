@@ -1,24 +1,19 @@
 <div class="row" style="margin-top: 10px;">
     <div class="col-md-12">
-        <mat-vertical-stepper labelPosition="bottom">
+        <mat-vertical-stepper labelPosition="bottom" (selectionChange)="onFormSubmit()">
 
             <!--If we want to display different icon for catefory then we have to pass "state" property-->
             <mat-step
                 [stepControl]="verticalFormGroup"
                 *ngFor="let category of dummyCategoryData; first as f; last as l">
 
-                <form [formGroup]="verticalFormGroup" (ngSubmit)="onFormSubmit()">
+                <form [formGroup]="verticalFormGroup">
                     <ng-template matStepLabel>
                         <div>
                             {{category.displayText}}
                         </div>
                     </ng-template>
 
-                    <h4>
-                        <strong>
-                            {{"Selected Category: " + category.displayText}}
-                        </strong>
-                    </h4>
 
                     <div *ngFor="let listItem of category.questionInputs">
 
@@ -79,22 +74,35 @@
                         </app-slider-elment>
                     </div>
 
-                    <div>
-                        <button
-                            *ngIf="!f"
-                            color="primary"
-                            mat-raised-button
-                            matStepperPrevious>
-                                Previous
-                        </button>
-                        <button
-                            *ngIf="!l"
-                            color="primary"
-                            mat-raised-button
-                            matStepperNext
-                            style="float: right;">
-                                Next
-                        </button>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <button
+                                *ngIf="!f"
+                                color="primary"
+                                mat-raised-button
+                                matStepperPrevious>
+                                    Prev
+                            </button>
+
+                            <button
+                                *ngIf="!l"
+                                color="primary"
+                                mat-raised-button
+                                matStepperNext
+                                style="float: right;">
+                                    Next
+                            </button>
+
+                            <button
+                                *ngIf="l"
+                                mat-raised-button
+                                matStepperNext
+                                style="float: right; color: rgb(103,58,183); background-color: white;"
+                                (click)="onSubmit()"
+                                aria-label="snack-bar">
+                                Submit
+                            </button>
+                        </div>
                     </div>
                 </form>
             </mat-step>

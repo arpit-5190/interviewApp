@@ -39,6 +39,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatRippleModule } from '@angular/material/core';
 import { MatSliderModule} from '@angular/material/slider';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 //Import httpclient module
 import { HttpClientModule } from '@angular/common/http';
@@ -81,7 +82,8 @@ import { CustomerCodeEntryComponent } from './customer-code-entry/customer-code-
     MatRippleModule,
     HttpClientModule,
     MatSliderModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
