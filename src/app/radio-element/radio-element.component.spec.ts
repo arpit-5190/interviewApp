@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { RadioElementComponent } from './radio-element.component';
+import { MaterialModuleModule } from '../material-module/material-module.module';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 describe('RadioElementComponent', () => {
   let component: RadioElementComponent;
@@ -8,7 +10,9 @@ describe('RadioElementComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ RadioElementComponent ]
+      imports: [MaterialModuleModule],
+      declarations: [ RadioElementComponent ],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
     })
     .compileComponents();
   }));
@@ -16,7 +20,7 @@ describe('RadioElementComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(RadioElementComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
+    // fixture.detectChanges();
   });
 
   it('should create', () => {

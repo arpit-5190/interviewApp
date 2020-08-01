@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SelectElementComponent } from './select-element.component';
+import { MaterialModuleModule } from '../material-module/material-module.module';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 describe('SelectElementComponent', () => {
   let component: SelectElementComponent;
@@ -8,7 +10,9 @@ describe('SelectElementComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SelectElementComponent ]
+      imports: [MaterialModuleModule],
+      declarations: [ SelectElementComponent ],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
     })
     .compileComponents();
   }));
@@ -16,7 +20,7 @@ describe('SelectElementComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(SelectElementComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
+    // fixture.detectChanges();
   });
 
   it('should create', () => {
