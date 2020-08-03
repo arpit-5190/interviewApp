@@ -7,7 +7,15 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 describe('SliderElmentComponent', () => {
   let component: SliderElmentComponent;
   let fixture: ComponentFixture<SliderElmentComponent>;
-
+  let testSliderModel = {
+    "question": {
+      "text": "Height"
+    },
+    'input': {
+      'requiredErrorMsg': 'Height is required'
+    },
+    'answer': 52
+  };
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [MaterialModuleModule],
@@ -26,4 +34,12 @@ describe('SliderElmentComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('pass some value and check in html element', () => {
+    component.dummySliderData = testSliderModel;
+    fixture.detectChanges();
+    //to verify value to feet + inch using conversion methoid result.
+    expect(component.sliderVal).toEqual('4 ft 4 in');
+  });
+
 });
