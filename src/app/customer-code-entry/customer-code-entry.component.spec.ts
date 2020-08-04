@@ -34,6 +34,10 @@ describe('CustomerCodeEntryComponent', () => {
   // });
 
   // it('verify number function', () => {
-  //   // expect(component).toBeTruthy();
+      //expect(component.numberOnly(1)).toBeTruthy();
+  // });
+
+  // it('verify number function', () => {
+      //expect(component.numberOnly(A)).toBeFalsy();
   // });
 });

@@ -58,18 +58,6 @@ describe('CheckboxElementComponent', () => {
 
     expect(checkboxInstance1.children[0].children[0].children[0].checked).toBeTruthy();
     expect(checkboxInstance2.children[0].children[0].children[0].checked).toBeFalsy();
-    // spyOn(component, 'onChange');
-    // checkboxInstance1.triggerEventHandler('change', {});
-    // fixture.detectChanges();
-    debugger;
-    // const value = {
-    //   "checked": false,
-    //   "label": "checkbox 1",
-    //   "value": "true"
-    // }
-    // component.onChange('$event', '', value );
-    // expect(component.onChange).toHaveBeenCalled();
-    // expect(component.checked).toBeFalsy(); // default state
   });
 
 });

@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed, tick } from '@angular/core/testing';
 
 import { RadioElementComponent } from './radio-element.component';
 import { MaterialModuleModule } from '../material-module/material-module.module';
-import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, DebugElement } from '@angular/core';
 import { By } from '@angular/platform-browser';
  // import { By } from 'protractor';
 
@@ -14,6 +14,7 @@ describe('RadioElementComponent', () => {
         'text': 'Lable text'
      },
     'input': {
+      'type': "radio",
       'selectOptions': [
             {
               "label": "Option_1",
@@ -42,6 +43,8 @@ describe('RadioElementComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(RadioElementComponent);
     component = fixture.componentInstance;
+    component.dummyRadioData = testRadioModel;
+    fixture.detectChanges();
     // fixture.detectChanges();
   });
 
@@ -50,20 +53,14 @@ describe('RadioElementComponent', () => {
   });
 
   it('render component with mock data to verify option count', () => {
-    component.dummyRadioData = testRadioModel;
-    fixture.detectChanges();
     let radioEleCount =  fixture.debugElement.query(By.css('.mat-radio-group')).nativeElement.childElementCount;
     //total count = radio option + error label
     expect(radioEleCount).toEqual(4);
-    // debugger;
-    // let radioButton =  fixture.debugElement.query(By.css('.mat-radio-button'));
-    // radioButton.childNodes[0].nativeNode.click();
-    // fixture.detectChanges();
-    // fixture.whenStable().then(() => {
-    //   let radioEleCount1 =  fixture.debugElement.query(By.css('.mat-radio-group')).nativeElement.childElementCount;
-    //   // debugger;
-    //   expect(radioEleCount1).toEqual(3);
-    // });
+  });
+
+  it('verify selected radio group value', () => {
+    component.radioChange(2);
+    expect(component.radioValue.value).toBe(2);
   });
 
 });
