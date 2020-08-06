@@ -37,6 +37,7 @@ export class BodyContentComponent implements OnInit {
     this.restapi.initialize(this.href);
 
     //subscribe rest api service method to retrieve the interview data
+    //Note: need to handle error case.
     this.restapi
       .sendGetRequest()
       .subscribe(
